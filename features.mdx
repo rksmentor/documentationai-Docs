@@ -1,0 +1,141 @@
+---
+title: Core Features
+description: Explore the essential features of Sourcingmentor that enable effective documentation organization and collaboration.
+---
+
+## Overview
+
+Sourcingmentor provides powerful tools to manage your project documentation efficiently. You can create, edit, track changes, collaborate with teams, and organize content seamlessly. These core features help you maintain organized knowledge bases for IT projects, web technologies, and more.
+
+<Columns cols={2}>
+  <Card title="Document Creation & Editing" icon="edit-3" href="#document-creation">
+    Rich editing tools with Markdown and MDX support.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes and revert to previous versions easily.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Share docs and work with your team in real-time.
+  </Card>
+  <Card title="Search & Organization" icon="search" href="#search-organization">
+    Powerful search and folder structures for quick access.
+  </Card>
+</Columns>
+
+## Document Creation and Editing Tools
+
+Create new documents quickly using the intuitive editor. Sourcingmentor supports Markdown and MDX, allowing you to embed components like code blocks, tables, and images directly.
+
+<Steps>
+  <Step title="Create a New Document" icon="plus">
+    Navigate to your workspace and click the "New Document" button. Choose a template for IT project notes, PHP guides, or blank pages.
+  </Step>
+  <Step title="Edit with Rich Tools" icon="edit-3">
+    Use the visual editor for bold, lists, and links. Switch to Markdown mode for advanced formatting.
+  </Step>
+  <Step title="Preview and Publish" icon="eye">
+    Preview changes live, then publish to make it available to your team.
+  </Step>
+</Steps>
+
+Here is an example of embedding a code block in your MDX document:
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Example: Fetch project data
+  async function getProjectData(id) {
+    const response = await fetch(`/api/projects/${id}`);
+    return response.json();
+  }
+  ```
+  ```python
+  # Example: Query database for projects
+  import requests
+  response = requests.get(f"https://api.example.com/projects/{project_id}")
+  data = response.json()
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+  Use keyboard shortcuts like <kbd>Ctrl</kbd>+<kbd>B</kbd> for bold and <kbd>Ctrl</kbd>+<kbd>K</kbd> for links to speed up editing.
+</Callout>
+
+## Version Control and History Tracking
+
+Every change you make is automatically versioned. View the full history, compare versions, and restore previous states without losing work.
+
+<Expandable title="How Version Control Works" default-open="true">
+  Sourcingmentor saves snapshots on each edit. Access history via the document menu.
+
+  ```mermaid
+  graph LR
+      A[Draft 1] --> B[Draft 2]
+      B --> C[Published v1.0]
+      C --> D[Edit: Fix typo]
+      D --> E[Published v1.1]
+  ```
+</Expandable>
+
+Restore a version in three steps:
+
+1. Open document history.
+2. Select the desired version.
+3. Click "Restore".
+
+## Collaboration and Sharing Options
+
+Invite team members to collaborate. Share public links or restrict access by role.
+
+<Tabs>
+  <Tab title="Team Invite" icon="users">
+    Add collaborators via email. They get edit or view-only permissions.
+
+    <ParamField path="userId" param-type="string" required="true">
+      Unique user identifier from your workspace.
+    </ParamField>
+  </Tab>
+  <Tab title="Public Sharing" icon="share-2">
+    Generate a shareable link with optional password protection.
+
+    ```javascript
+    // Embed share link in apps
+    const shareUrl = "https://app.sourcingmentor.com/doc/share/abc123";
+    navigator.clipboard.writeText(shareUrl);
+    ```
+  </Tab>
+  <Tab title="Embed" icon="code">
+    Embed documents in your site or dashboard.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+  Real-time cursors show who is editing, reducing conflicts.
+</Callout>
+
+## Search and Organization Capabilities
+
+Organize documents with folders, tags, and advanced search. Find content instantly across your workspace.
+
+| Feature | Description | Use Case |
+|---------|-------------|----------|
+| Full-Text Search | Searches titles, content, and tags | Locate PHP framework notes quickly |
+| Folders & Nesting | Hierarchical organization | Group by project: Web Tech > PHP |
+| Tags | Custom labels for filtering | #urgent, #database, #team-review |
+| Filters | By date, author, or type | Recent changes by Ronald Krick |
+
+Use tags like this in your documents:
+
+````markdown
+---
+tags: ["php", "database", "urgent"]
+---
+````
+
+<Columns cols={2}>
+  <Card title="Next: Quickstart" icon="zap" href="/quickstart">
+    Set up your first workspace.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs.
+  </Card>
+</Columns>

@@ -1,0 +1,144 @@
+---
+title: Quick Start Guide
+description: Get up and running with Sourcingmentor in minutes by setting up your account and creating your first documentation space.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+<Callout kind="info">
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- Optional: GitHub account for content import
+</Callout>
+
+<Callout kind="tip">
+No software installation required—everything runs in your browser.
+</Callout>
+
+## Create Your Account
+
+Sign up for Sourcingmentor to access your documentation workspace.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to the [Sourcingmentor dashboard](https://app.sourcingmentor.com).
+  </Step>
+  <Step title="Register" icon="user-plus">
+    Click **Sign Up** and fill in your details:
+
+    - Email address
+    - Password (minimum 8 characters)
+    - Full name
+
+    Submit the form to receive a verification email.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox and click the verification link. This activates your account.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the dashboard, enter your credentials, and access your workspace.
+  </Step>
+</Steps>
+
+## Create Your First Documentation Project
+
+Once logged in, set up a new space for your project docs.
+
+<Steps>
+  <Step title="New Project" icon="plus">
+    Click **New Documentation Space** in the sidebar.
+  </Step>
+  <Step title="Configure Basics" icon="settings">
+    Enter project details:
+
+    ```
+    Name: My Project Docs
+    Description: Documentation for my app
+    Visibility: Private (or Public)
+    ```
+
+  </Step>
+  <Step title="Generate Starter Pages" icon="file-text">
+    Select **Quick Start Template** to auto-populate with sample pages like Introduction and API Reference.
+  </Step>
+  <Step title="Save and Publish" icon="save">
+    Click **Create**. Your space is now live at a unique URL like `https://app.sourcingmentor.com/spaces/my-project`.
+  </Step>
+</Steps>
+
+## Interface Tour
+
+Get familiar with the key areas of the Sourcingmentor editor.
+
+<Tabs>
+  <Tab title="Editor" icon="edit-3">
+    The main editing pane supports live MDX preview. Use the toolbar for headings, components, and media inserts.
+
+    <Image
+      src="https://via.placeholder.com/800x400/007BFF/white?text=Editor+Screenshot"
+      alt="Sourcingmentor editor interface"
+      width="800"
+      height="400"
+    />
+  </Tab>
+  <Tab title="Sidebar" icon="sidebar">
+    Manage pages, settings, and imports:
+
+    - **Pages**: Tree view of your documentation
+    - **Themes**: Customize with your brand color (`#007BFF`)
+    - **Exports**: Download as PDF or GitHub repo
+  </Tab>
+  <Tab title="Preview" icon="eye">
+    Real-time preview shows how your docs render for readers.
+  </Tab>
+</Tabs>
+
+## Import Initial Content
+
+Populate your space quickly with existing docs.
+
+<CodeGroup tabs="Markdown,GitHub">
+  ```markdown
+  # Welcome
+
+  ## Overview
+
+  This is your first page.
+  ```
+  ```bash
+  # Clone your space as GitHub repo
+  git clone https://github.com/sourcingmentor/my-project-docs.git
+  # Edit locally, then push changes
+  git add .
+  git commit -m "Update docs"
+  git push
+  ```
+</CodeGroup>
+
+<Expandable title="Advanced Import Options" default-open="false">
+Use the import wizard for:
+
+- ZIP archives of Markdown files
+- Public GitHub repos
+- Google Docs via API
+</Expandable>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Customize Themes" icon="palette" href="#themes">
+    Apply your brand colors and logos.
+  </Card>
+  <Card title="Add Authentication" icon="shield" href="/authentication">
+    Secure your documentation spaces.
+  </Card>
+  <Card title="Explore Features" icon="star" href="/introduction">
+    Dive into advanced capabilities.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+Congratulations! You've created your first Sourcingmentor documentation space. Share the URL with your team and start collaborating.
+</Callout>

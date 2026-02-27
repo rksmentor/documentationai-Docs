@@ -1,0 +1,124 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and bug fixes in Sourcingmentor to stay informed about new features.
+---
+
+<Callout kind="info">
+  Check this changelog regularly to stay current with Sourcingmentor updates. Subscribe to notifications via your account settings for automatic alerts on major releases.
+</Callout>
+
+## Recent Releases
+
+Review the latest versions below, ordered newest first. Each release includes new features, improvements, and fixes tailored to enhance your documentation management experience.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Added real-time collaboration for shared documentation spaces
+- Introduced custom branding options including brand color support (e.g., `#007BFF`)
+- New export formats: PDF and Markdown bundles
+
+## Improvements
+
+- Enhanced search with fuzzy matching and full-text indexing
+- Optimized page load times by `>30%`
+- Better mobile responsiveness for documentation previews
+
+## Bug Fixes
+
+- Fixed navigation issues in nested hierarchies
+- Resolved image upload failures in certain browsers
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+## New Features
+
+- Integrated version history with diff viewer for page changes
+- Added template gallery for common documentation structures
+- Support for embedding external content like PHP code snippets
+
+## Improvements
+
+- Streamlined sidebar navigation for large doc sites
+- Updated UI components for better accessibility
+
+## Bug Fixes
+
+- Corrected syntax highlighting for relational database SQL examples
+- Fixed CMS integration preview rendering errors
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+## New Features
+
+- Core documentation workspace with page organization and search
+- Initial support for MDX rendering and component previews
+- Basic project management for IT service documentation
+
+## Breaking Changes
+
+- Updated configuration format; migrate old settings via the dashboard
+
+## Bug Fixes
+
+- Initial stability improvements for web technology guides
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to update your Sourcingmentor instance.
+
+<Steps>
+  <Step title="Backup" icon="database">
+    Create a full backup of your documentation space.
+    
+    ```bash
+    sourcingmentor backup --all
+    ```
+  </Step>
+  <Step title="Update" icon="download">
+    Run the update command with the latest version.
+    
+    <CodeGroup tabs="CLI,Docker">
+    ````bash
+    sourcingmentor update v1.2.0
+    ````
+    ````bash
+    docker pull sourcingmentor:latest
+    docker-compose up -d
+    ````
+    </CodeGroup>
+  </Step>
+  <Step title="Verify" icon="check-circle">
+    Test key features like search and collaboration.
+    
+    Visit `https://dashboard.example.com` to confirm.
+  </Step>
+</Steps>
+
+## Version Summary
+
+| Version | Date       | Key Changes                  | Tags                  |
+|---------|------------|------------------------------|-----------------------|
+| v1.2.0  | 2024-10-15 | Collaboration, branding     | feature, improvement |
+| v1.1.0  | 2024-09-20 | Version history, templates  | feature, bugfix     |
+| v1.0.0  | 2024-08-10 | Initial release             | breaking, feature   |
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started with the latest version.
+  </Card>
+  <Card title="Support" icon="help-circle" href="/help-center">
+    Need help upgrading? Contact support.
+  </Card>
+</Columns>
+
+## Upcoming Features
+
+<Expandable title="Preview of v1.3.0" default-open="false">
+  - Advanced analytics for doc usage
+  - AI-assisted content generation for PHP and CMS guides
+  - Webhook integrations for custom workflows
+  
+  Expect release by end of Q4 2024. Provide feedback via the dashboard.
+</Expandable>
